@@ -1,0 +1,36 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+/* @theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@import "tailwindcss"; */
+
+@theme {
+    /* Couleurs personnalisées */
+    --color-primary: #1A3A5A;
+    --color-accent: #E63946;
+    --color-surface: #F8F9FA;
+    --color-neutral: #333333;
+
+    /* Typographies */
+    --font-heading: "Montserrat", sans-serif;
+    --font-body: "Inter", sans-serif;
+}
+
+/* Import des polices Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap');
+
+body {
+    @apply bg-surface text-neutral font-body antialiased;
+}
+
+h1, h2, h3, h4 {
+    @apply font-heading font-bold;
+}
