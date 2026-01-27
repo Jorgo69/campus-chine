@@ -1,0 +1,49 @@
+# MISSION ANTIGRAVITY : CAMPUS CHINE (ELITE VERSION)
+## Charte Graphique
+- Bleu Nuit: #1A3A5A (Confiance)
+- Rouge Corail: #E63946 (Action/Chine)
+- Blanc Cassé: #F8F9FA (Fond)
+- Police: Montserrat (Titres) / Inter (Corps)
+
+## Architecture & Stack
+- Framework: Laravel 12 (Bootstrap via AppServiceProvider)
+- Frontend: Tailwind CSS 4 + Alpine.js (Livewire 3 bundle)
+- Notifications: Laravel Notify (mckenziearts)
+- Icônes: Lucide Blade
+- UI Style: Institutionnel, Moderne, Épuré.
+
+## Objectif Business
+Convertir des étudiants africains pour des bourses en Chine. 
+Action principale : Téléchargement de la brochure via formulaire Livewire.
+
+## Règle d'Or
+L'IA doit générer l'intégralité du code, du texte et des animations. L'utilisateur ne doit rien corriger. 
+
+## Arborescence Cible
+- Layout: resources/views/components/app-layout.blade.php
+- Sections (Include): resources/views/sections/ (hero, features, event, testimonials, footer)
+- Formulaire: resources/views/livewire/lead-form.blade.php
+
+## Design System (Mobile First & UX)
+- Palette: Primary(#1A3A5A), Accent(#E63946), Surface(#F8F9FA), Text(#333333)
+- Fonts: Montserrat (Headings), Inter (Body)
+- Style: Glassmorphism (Navbar/Cards), Soft Shadows, Modern Borders
+- Mobile: Priorité absolue à la navigation pouce (Thumb-friendly) et vitesse de chargement.
+
+## Directives UI/UX (Effet "React/Vue")
+- Navbar: Effet Glassmorphism dynamique au scroll (Alpine.js).
+- Animations: Utiliser 'Intersectional Observer' via Alpine.js pour des entrées fluides (Fade-in up, scale-in).
+- Formulaire: Feedback immédiat via Laravel Notify + Loader sur le bouton.
+- Mobile: Design 100% Mobile-First (Thumb-friendly).
+
+## Animations & Transitions
+- Librairie: Alpine.js + Tailwind Transitions.
+- Effets: Fade-in up au scroll, Hover lift (scale + shadow), Staggered animations (éléments qui apparaissent l'un après l'autre).
+
+## Ressources Disponibles
+- Logo: public/images/logo.jpeg
+- Photos WhatsApp: public/images/ (Utilise les noms de fichiers présents).
+- Brochure: public/pdf/brochure.pdf
+
+## Copywriting IA
+Le ton doit être : Leader, Expert, Rassurant, Urgent (pour l'événement de Mars).
