@@ -410,6 +410,114 @@
     </section>
 
     {{-- ============================================
+         SECTION: VIE SUR LE CAMPUS (Masonry Grid)
+         ============================================ --}}
+    <section id="campus" class="relative py-24 lg:py-32 px-4 bg-white overflow-hidden">
+        
+        {{-- Section Header --}}
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <div class="scroll-hidden">
+                <span class="inline-block bg-primary/10 text-primary font-semibold px-4 py-2 rounded-full text-sm mb-6">
+                    IMMERSION TOTALE
+                </span>
+            </div>
+            <div class="scroll-hidden delay-100">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-primary mb-6">
+                    La Vie sur le <span class="text-accent">Campus</span>
+                </h2>
+            </div>
+            <div class="scroll-hidden delay-200">
+                <p class="text-lg text-neutral/70 max-w-2xl mx-auto">
+                    Découvrez le quotidien de nos étudiants en Chine : campus modernes, événements culturels, amitiés internationales.
+                </p>
+            </div>
+        </div>
+        
+        {{-- Masonry Grid --}}
+        <div class="max-w-6xl mx-auto">
+            <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+                
+                {{-- Image 1 - Tall --}}
+                <div class="scroll-hidden delay-100 break-inside-avoid">
+                    <div class="relative group overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                        <img 
+                            src="{{ asset('images/images-1.jpeg') }}" 
+                            alt="Campus universitaire en Chine" 
+                            class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <h4 class="font-heading font-bold text-lg">Campus Modernes</h4>
+                            <p class="text-sm text-white/80">Infrastructures de classe mondiale</p>
+                        </div>
+                    </div>
+                </div>
+                
+                {{-- Image 2 - Medium --}}
+                <div class="scroll-hidden delay-200 break-inside-avoid">
+                    <div class="relative group overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                        <img 
+                            src="{{ asset('images/images-2.jpeg') }}" 
+                            alt="Étudiants africains diplômés" 
+                            class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-accent/80 via-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <h4 class="font-heading font-bold text-lg">Remise des Diplômes</h4>
+                            <p class="text-sm text-white/80">Des moments inoubliables</p>
+                        </div>
+                    </div>
+                </div>
+                
+                {{-- Image 3 - Tall --}}
+                <div class="scroll-hidden delay-300 break-inside-avoid">
+                    <div class="relative group overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                        <img 
+                            src="{{ asset('images/images-3.jpeg') }}" 
+                            alt="Vie étudiante en Chine" 
+                            class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <h4 class="font-heading font-bold text-lg">Amitiés Internationales</h4>
+                            <p class="text-sm text-white/80">Une communauté soudée</p>
+                        </div>
+                    </div>
+                </div>
+                
+                {{-- Image 4 - Medium --}}
+                <div class="scroll-hidden delay-400 break-inside-avoid">
+                    <div class="relative group overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                        <img 
+                            src="{{ asset('images/images-4.jpeg') }}" 
+                            alt="Événements culturels" 
+                            class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-accent/80 via-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <h4 class="font-heading font-bold text-lg">Culture & Découvertes</h4>
+                            <p class="text-sm text-white/80">Explorez la Chine authentique</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        {{-- CTA under gallery --}}
+        <div class="max-w-2xl mx-auto text-center mt-16">
+            <div class="scroll-hidden delay-500">
+                <p class="text-neutral/70 mb-6">
+                    Rejoignez une communauté vibrante d'étudiants africains qui vivent une expérience unique en Chine.
+                </p>
+                <a href="#formulaire" class="btn-cta">
+                    <x-lucide-camera class="w-5 h-5 mr-2" />
+                    Téléchargez Plus de Photos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    {{-- ============================================
          SECTION: ÉVÉNEMENT MARS 2026
          ============================================ --}}
     <section id="evenement" class="relative py-20 lg:py-28 px-4 overflow-hidden">

@@ -47,7 +47,7 @@
         x-transition:leave="transition ease-in duration-200"
         x-transition:leave-start="opacity-100 translate-y-0"
         x-transition:leave-end="opacity-0 translate-y-4"
-        class="fixed bottom-6 right-6 z-[100] max-w-sm"
+        class="fixed top-24 right-6 z-[100] max-w-sm"
         style="display: none;"
     >
         <div 
@@ -157,6 +157,9 @@
                     <a href="#temoignages" class="font-medium text-neutral hover:text-accent transition-colors duration-200">
                         Témoignages
                     </a>
+                    <a href="#campus" class="font-medium text-neutral hover:text-accent transition-colors duration-200">
+                        Campus
+                    </a>
                     <a href="#evenement" class="font-semibold text-accent hover:text-accent/80 transition-colors duration-200">
                         🔥 Événement Mars
                     </a>
@@ -228,6 +231,9 @@
                 </a>
                 <a href="#temoignages" @click="mobileOpen = false" class="text-xl font-semibold text-primary hover:text-accent transition-colors">
                     Témoignages
+                </a>
+                <a href="#campus" @click="mobileOpen = false" class="text-xl font-semibold text-primary hover:text-accent transition-colors">
+                    Campus
                 </a>
                 <a href="#evenement" @click="mobileOpen = false" class="text-xl font-semibold text-accent">
                     🔥 Événement Mars

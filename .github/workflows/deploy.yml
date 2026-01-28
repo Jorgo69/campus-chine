@@ -1,0 +1,104 @@
+name: 🚀 Deploy to LWS Production
+
+on:
+  push:
+    branches:
+      - production
+
+jobs:
+  deploy:
+    name: 🎯 Build & Deploy to LWS
+    runs-on: ubuntu-latest
+    
+    steps:
+      # ==========================================
+      # 1. CHECKOUT CODE
+      # ==========================================
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      # ==========================================
+      # 2. SETUP PHP
+      # ==========================================
+      - name: 🐘 Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, xml, ctype, iconv, intl, pdo_mysql, dom, filter, gd, json, zip
+          coverage: none
+
+      # ==========================================
+      # 3. INSTALL COMPOSER DEPENDENCIES (Production)
+      # ==========================================
+      - name: 📦 Get Composer Cache Directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - name: 💾 Cache Composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
+
+      - name: 🔧 Install Composer dependencies (no-dev)
+        run: composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
+
+      # ==========================================
+      # 4. SETUP NODE.JS & BUILD ASSETS
+      # ==========================================
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📦 Install NPM dependencies
+        run: npm ci
+
+      - name: 🏗️ Build production assets
+        run: npm run build
+
+      # ==========================================
+      # 5. PREPARE FOR DEPLOYMENT
+      # ==========================================
+      - name: 🧹 Remove development files
+        run: |
+          rm -rf node_modules
+          rm -rf tests
+          rm -rf .git
+          rm -rf .github
+          rm -f .env.example
+          rm -f .gitignore
+          rm -f .gitattributes
+          rm -f .editorconfig
+          rm -f phpunit.xml
+          rm -f vite.config.js
+          rm -f package.json
+          rm -f package-lock.json
+          rm -f composer.lock
+          rm -f README.md
+
+      # ==========================================
+      # 6. DEPLOY VIA FTP TO LWS
+      # ==========================================
+      - name: 🚀 Deploy to LWS via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # Chemin vers le dossier de votre sous-domaine sur LWS
+          # Pour votre config: /public_html/campus-chine
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}/
+          # Exclusions
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/tests/**
+            **/.env
+            **/.env.example
+          # Options de synchronisation
+          dangerous-clean-slate: false
+          log-level: standard
