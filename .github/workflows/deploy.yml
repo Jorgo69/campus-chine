@@ -96,7 +96,21 @@ jobs:
             **/.git*
             **/.git*/**
             **/node_modules/**
+            **/vendor/**
             **/tests/**
             **/.env
           dangerous-clean-slate: false
           log-level: standard
+
+      # ------------------------------------------
+      # STEP 7: Trigger webhook to run deploy.sh
+      # Executes composer install and cache on server
+      # ------------------------------------------
+      - name: Trigger deploy webhook
+        run: |
+          sleep 10
+          curl -X POST "${{ secrets.APP_URL }}/webhook.php?token=${{ secrets.WEBHOOK_SECRET }}" \
+            -H "Content-Type: application/json" \
+            --max-time 300 \
+            --retry 3 \
+            --retry-delay 5
