@@ -1,4 +1,9 @@
-name: 🚀 Deploy to LWS Production
+# ==============================================================================
+# GITHUB ACTIONS - Deploy to LWS Production (FTP Only)
+# Triggered on push to 'production' branch
+# ==============================================================================
+
+name: Deploy to LWS Production
 
 on:
   push:
@@ -7,69 +12,65 @@ on:
 
 jobs:
   deploy:
-    name: 🎯 Build & Deploy to LWS
+    name: Build and Deploy
     runs-on: ubuntu-latest
     
     steps:
-      # ==========================================
-      # 1. CHECKOUT CODE
-      # ==========================================
-      - name: 📥 Checkout repository
+      # ------------------------------------------
+      # STEP 1: Checkout source code
+      # ------------------------------------------
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      # ==========================================
-      # 2. SETUP PHP
-      # ==========================================
-      - name: 🐘 Setup PHP
+      # ------------------------------------------
+      # STEP 2: Setup PHP 8.3
+      # ------------------------------------------
+      - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.3' # Change 8.2 par 8.3 ici
+          php-version: '8.3'
           tools: composer:v2
           extensions: mbstring, xml, ctype, iconv, intl, pdo_mysql, dom, filter, gd, json, zip
           coverage: none
 
-      # ==========================================
-      # 3. INSTALL COMPOSER DEPENDENCIES (Production)
-      # ==========================================
-      - name: 📦 Get Composer Cache Directory
-        id: composer-cache
-        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
-
-      - name: 💾 Cache Composer dependencies
+      # ------------------------------------------
+      # STEP 3: Composer dependencies (production)
+      # Installs vendor/ which will be sent via FTP
+      # ------------------------------------------
+      - name: Cache Composer
         uses: actions/cache@v4
         with:
-          path: ${{ steps.composer-cache.outputs.dir }}
-          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          path: vendor
+          key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
           restore-keys: ${{ runner.os }}-composer-
 
-      - name: 🔧 Install Composer dependencies (no-dev)
+      - name: Install Composer dependencies
         run: composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
 
-      # ==========================================
-      # 4. SETUP NODE.JS & BUILD ASSETS
-      # ==========================================
-      - name: 🟢 Setup Node.js
+      # ------------------------------------------
+      # STEP 4: Build frontend assets
+      # ------------------------------------------
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
 
-      - name: 📦 Install NPM dependencies
-        run: npm ci
+      - name: Install NPM and build
+        run: |
+          npm ci
+          npm run build
 
-      - name: 🏗️ Build production assets
-        run: npm run build
-
-      # ==========================================
-      # 5. PREPARE FOR DEPLOYMENT
-      # ==========================================
-      - name: 🧹 Remove development files
+      # ------------------------------------------
+      # STEP 5: Cleanup dev files before FTP
+      # Removes files not needed in production
+      # ------------------------------------------
+      - name: Remove dev files
         run: |
           rm -rf node_modules
           rm -rf tests
           rm -rf .git
           rm -rf .github
-          rm -f .env.example
           rm -f .gitignore
           rm -f .gitattributes
           rm -f .editorconfig
@@ -77,29 +78,25 @@ jobs:
           rm -f vite.config.js
           rm -f package.json
           rm -f package-lock.json
-          rm -f composer.lock
           rm -f README.md
 
-      # ==========================================
-      # 6. DEPLOY VIA FTP TO LWS
-      # ==========================================
-      - name: 🚀 Deploy to LWS via FTP
+      # ------------------------------------------
+      # STEP 6: Deploy via FTP
+      # Sends all files including vendor/
+      # Excludes: .git, node_modules, tests, .env
+      # ------------------------------------------
+      - name: Deploy to LWS via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # Chemin vers le dossier de votre sous-domaine sur LWS
-          # Pour votre config: /public_html/campus-chine
           server-dir: ${{ secrets.FTP_SERVER_DIR }}/
-          # Exclusions
           exclude: |
             **/.git*
             **/.git*/**
             **/node_modules/**
             **/tests/**
             **/.env
-            **/.env.example
-          # Options de synchronisation
           dangerous-clean-slate: false
           log-level: standard
