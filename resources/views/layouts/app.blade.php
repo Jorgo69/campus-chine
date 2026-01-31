@@ -262,12 +262,12 @@
                         </span>
                     </div>
                     <p class="text-white/70 leading-relaxed max-w-md mb-6">
-                        Votre partenaire de confiance pour accéder aux meilleures universités chinoises. 
-                        Accompagnement personnalisé de A à Z pour réaliser votre rêve d'excellence.
+                        Votre partenaire de confiance pour acceder aux meilleures universites chinoises. 
+                        Accompagnement personnalise de A a Z pour realiser votre reve d'excellence.
                     </p>
                     {{-- Social Links --}}
                     <div class="flex gap-4">
-                        <a href="{{ config('app.whatsapp.link') }}{{ config('app.whatsapp.number') }}" target="_blank" 
+                        <a href="{{ config('landing.whatsapp.link') }}{{ config('landing.whatsapp.number') }}" target="_blank" 
                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
                             <x-lucide-message-circle class="w-5 h-5" />
                         </a>
@@ -288,9 +288,10 @@
                     <h4 class="font-heading font-bold text-lg mb-6">Liens Rapides</h4>
                     <ul class="space-y-3">
                         <li><a href="#accueil" class="text-white/70 hover:text-white transition-colors">Accueil</a></li>
+                        <li><a href="#mission" class="text-white/70 hover:text-white transition-colors">Notre Mission</a></li>
                         <li><a href="#pourquoi" class="text-white/70 hover:text-white transition-colors">Pourquoi la Chine</a></li>
-                        <li><a href="#temoignages" class="text-white/70 hover:text-white transition-colors">Témoignages</a></li>
-                        <li><a href="#formulaire" class="text-white/70 hover:text-white transition-colors">Télécharger la Brochure</a></li>
+                        <li><a href="#parcours" class="text-white/70 hover:text-white transition-colors">Votre Parcours</a></li>
+                        <li><a href="#temoignages" class="text-white/70 hover:text-white transition-colors">Temoignages</a></li>
                     </ul>
                 </div>
                 
@@ -300,17 +301,31 @@
                     <ul class="space-y-3">
                         <li class="flex items-center gap-3 text-white/70">
                             <x-lucide-mail class="w-5 h-5 text-accent" />
-                            <span>contact@campuschine.com</span>
+                            <a href="mailto:{{ config('landing.contact.email') }}" class="hover:text-white transition-colors">
+                                {{ config('landing.contact.email') }}
+                            </a>
                         </li>
                         <li class="flex items-center gap-3 text-white/70">
                             <x-lucide-phone class="w-5 h-5 text-accent" />
-                            <span>{{ config('app.whatsapp.number') }}</span>
+                            <a href="tel:{{ config('landing.contact.phone') }}" class="hover:text-white transition-colors">
+                                {{ config('landing.contact.phone') }}
+                            </a>
                         </li>
                         <li class="flex items-start gap-3 text-white/70">
                             <x-lucide-map-pin class="w-5 h-5 text-accent mt-1" />
-                            <span>Pékin, Shanghai, Guangzhou</span>
+                            <span>Pekin, Shanghai, Guangzhou</span>
                         </li>
                     </ul>
+                    
+                    {{-- WhatsApp Button --}}
+                    <div class="mt-6">
+                        <a href="{{ config('landing.whatsapp.link') }}{{ config('landing.whatsapp.number') }}?text={{ urlencode(config('landing.whatsapp.message')) }}" 
+                           target="_blank"
+                           class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-2.5 rounded-full transition-all duration-300 hover:scale-105">
+                            <x-lucide-message-circle class="w-5 h-5" />
+                            WhatsApp
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -319,11 +334,14 @@
         <div class="border-t border-white/10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
-                    <p>&copy; 2026 Campus Chine. Tous droits réservés.</p>
-                    <p>Votre passerelle vers l'excellence académique chinoise 🇨🇳</p>
+                    <p>&copy; {{ date('Y') }} Campus Chine. Tous droits reserves.</p>
+                    <p>Votre passerelle vers l'excellence academique chinoise</p>
                 </div>
             </div>
         </div>
     </footer>
+    
+    @notifyJs
+    {{-- @livewireScripts --}}
 </body>
 </html>
