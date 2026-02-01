@@ -28,7 +28,7 @@
                     {{-- Main Title --}}
                     <div class="scroll-hidden delay-100">
                         <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-heading font-extrabold text-primary leading-[1.1] tracking-tight">
-                            Votre Bourse d'Etudes en 
+                            Votre Projet d'Etudes en 
                             <span class="text-gradient-accent">Chine</span>, 
                             C'est Maintenant.
                         </h1>
@@ -38,7 +38,7 @@
                     <div class="scroll-hidden delay-200">
                         <p class="text-lg sm:text-xl text-neutral/80 leading-relaxed max-w-xl">
                             Rejoignez l'elite des etudiants africains dans les universites chinoises les plus prestigieuses. 
-                            <strong class="text-primary">Accompagnement complet</strong> : dossier, visa, integration — de votre candidature jusqu'a votre diplome.
+                            <strong class="text-primary">Accompagnement complet</strong> : dossier, visa, integration — de votre candidature jusqu'a votre installation en Chine.
                         </p>
                     </div>
                     
@@ -51,7 +51,7 @@
                             </div>
                             <div class="text-center">
                                 <div class="text-3xl font-heading font-extrabold text-accent">100%</div>
-                                <div class="text-sm text-neutral/60">Bourses accessibles</div>
+                                <div class="text-sm text-neutral/60">Projets accessibles</div>
                             </div>
                             <div class="text-center">
                                 <div class="text-3xl font-heading font-extrabold text-primary">50+</div>
@@ -208,7 +208,7 @@
             </div>
             <div class="scroll-hidden delay-200">
                 <p class="text-lg text-neutral/70 max-w-2xl mx-auto">
-                    La Chine offre une combinaison unique d'excellence academique, de bourses genereuses et d'opportunites de carriere internationales.
+                    La Chine offre une combinaison unique d'excellence academique, de Projets genereuses et d'opportunites de carriere internationales.
                 </p>
             </div>
         </div>
@@ -321,7 +321,7 @@
             </div>
             <div class="scroll-hidden delay-200">
                 <p class="text-lg text-neutral/70 max-w-2xl mx-auto">
-                    De votre premiere question jusqu'a votre diplome, nous vous accompagnons a chaque etape.
+                    De votre premiere question jusqu'a votre installation en Chine, nous vous accompagnons a chaque etape.
                 </p>
             </div>
         </div>
@@ -527,7 +527,7 @@
         
         {{-- Masonry Grid --}}
         <div class="max-w-6xl mx-auto">
-            <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+            <div class="columns-1 sm:columns-2 lg:columns-2 gap-6 space-y-6">
                 @foreach(['images-1', 'images-2', 'images-3', 'images-4'] as $index => $image)
                     <div class="scroll-hidden delay-{{ ($index + 1) * 100 }} break-inside-avoid">
                         <div class="relative group overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500">

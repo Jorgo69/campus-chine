@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     {{-- SEO Meta Tags --}}
-    <title>Campus Chine | Bourses d'études en Chine pour étudiants africains</title>
-    <meta name="description" content="Décrochez votre bourse d'études en Chine. Campus Chine accompagne les étudiants africains : dossier, visa, intégration. Universités prestigieuses, bourses jusqu'à 100%.">
+    <title>Campus Chine | Projets d'études en Chine pour étudiants africains</title>
+    <meta name="description" content="Décrochez votre projet d'études en Chine. Campus Chine accompagne les étudiants africains : dossier, visa, intégration. Universités prestigieuses, bourses jusqu'à 100%.">
     <meta name="keywords" content="bourse chine, études chine, université chine, bourse africain, campus chine, étudier en chine">
     <meta name="author" content="Campus Chine">
     
     {{-- Open Graph --}}
-    <meta property="og:title" content="Campus Chine | Votre Bourse d'Études en Chine">
+    <meta property="og:title" content="Campus Chine | Votre Projet d'Études en Chine">
     <meta property="og:description" content="Rejoignez l'élite des étudiants africains dans les universités chinoises les plus prestigieuses.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
@@ -164,7 +164,7 @@
                 
                 {{-- Desktop CTA Button --}}
                 <div class="hidden md:block">
-                    <a href="#formulaire" class="btn-cta text-sm">
+                    <a href="#contact" class="btn-cta text-sm">
                         Télécharger la Brochure
                     </a>
                 </div>
@@ -301,19 +301,19 @@
                     <ul class="space-y-3">
                         <li class="flex items-center gap-3 text-white/70">
                             <x-lucide-mail class="w-5 h-5 text-accent" />
-                            <a href="mailto:{{ config('landing.contact.email') }}" class="hover:text-white transition-colors">
-                                {{ config('landing.contact.email') }}
+                            <a href="mailto:{{ config('landing.email') }}" class="hover:text-white transition-colors">
+                                {{ config('landing.email') }}
                             </a>
                         </li>
                         <li class="flex items-center gap-3 text-white/70">
                             <x-lucide-phone class="w-5 h-5 text-accent" />
-                            <a href="tel:{{ config('landing.contact.phone') }}" class="hover:text-white transition-colors">
-                                {{ config('landing.contact.phone') }}
+                            <a href="tel:{{ config('landing.phone') }}" class="hover:text-white transition-colors">
+                                {{ config('landing.phone') }}
                             </a>
                         </li>
                         <li class="flex items-start gap-3 text-white/70">
                             <x-lucide-map-pin class="w-5 h-5 text-accent mt-1" />
-                            <span>Pekin, Shanghai, Guangzhou</span>
+                            <span>{{ config('landing.location') }}</span>
                         </li>
                     </ul>
                     

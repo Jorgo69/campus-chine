@@ -6,11 +6,11 @@ return [
     | Informations de Contact
     |--------------------------------------------------------------------------
     */
-    'phone' => '+8617880215750',
+    'phone' => '+8617880215750, +22967155555',
     
-    'email' => 'contact@campuschine.org',
+    'email' => 'contact@campuschine.org, campuschine@gmail.com',
     
-    'location' => 'Pekin, Shanghai, Guangzhou',
+    'location' => 'Chongqing - Chine, Cotonou - Bénin',
     
     'country' => 'Chine',
 
@@ -98,8 +98,8 @@ return [
     |--------------------------------------------------------------------------
     */
     'event' => [
-        'date' => 'Samedi 15 Mars 2026',
-        'time' => '14h00 - 17h00 (Heure de Paris)',
+        'date' => 'Samedi 28 Mars 2026',
+        'time' => '10h00 (Heure du Bénin)',
         'title' => 'Conference Exclusive',
     ],
 ];
