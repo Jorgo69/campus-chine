@@ -6,7 +6,7 @@ return [
     | Informations de Contact
     |--------------------------------------------------------------------------
     */
-    'phone' => '+8617880215750, +22967155555',
+    'phone' => '+8617880215750, +2290148880808',
     
     'email' => 'contact@campuschine.org, campuschine01@gmail.com',
     
@@ -20,7 +20,7 @@ return [
     |--------------------------------------------------------------------------
     */
     'whatsapp' => [
-        'phone' => '+22967155555',
+        'phone' => '+2290148880808',
         'number' => '+2290151120202',
         'link' => 'https://wa.me/',
         'message' => 'Bonjour Campus Chine ! Je suis intéressé(e) par vos services d\'accompagnement pour étudier en Chine. Pouvez-vous m\'envoyer plus d\'informations ?',
