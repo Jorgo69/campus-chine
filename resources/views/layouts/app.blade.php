@@ -15,6 +15,7 @@
     <meta property="og:description" content="Rejoignez l'élite des étudiants africains dans les universités chinoises les plus prestigieuses.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -262,8 +263,8 @@
                         </span>
                     </div>
                     <p class="text-white/70 leading-relaxed max-w-md mb-6">
-                        Votre partenaire de confiance pour acceder aux meilleures universites chinoises. 
-                        Accompagnement personnalise de A a Z pour realiser votre reve d'excellence.
+                        Votre partenaire de confiance pour accéder aux meilleures universités chinoises. 
+                        Accompagnement personnalisé de A à Z pour réaliser votre rêve d'excellence.
                     </p>
                     {{-- Social Links --}}
                     <div class="flex gap-4">
@@ -277,8 +278,8 @@
                         <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
                             <x-lucide-instagram class="w-5 h-5" />
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
-                            <x-lucide-linkedin class="w-5 h-5" />
+                        <a href="https://www.tiktok.com/@campuschine01" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
+                            <i class="fa-brands fa-tiktok text-white"></i>
                         </a>
                     </div>
                 </div>
@@ -291,7 +292,7 @@
                         <li><a href="#mission" class="text-white/70 hover:text-white transition-colors">Notre Mission</a></li>
                         <li><a href="#pourquoi" class="text-white/70 hover:text-white transition-colors">Pourquoi la Chine</a></li>
                         <li><a href="#parcours" class="text-white/70 hover:text-white transition-colors">Votre Parcours</a></li>
-                        <li><a href="#temoignages" class="text-white/70 hover:text-white transition-colors">Temoignages</a></li>
+                        <li><a href="#temoignages" class="text-white/70 hover:text-white transition-colors">Témoignages</a></li>
                     </ul>
                 </div>
                 
@@ -334,8 +335,8 @@
         <div class="border-t border-white/10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
-                    <p>&copy; {{ date('Y') }} Campus Chine. Tous droits reserves.</p>
-                    <p>Votre passerelle vers l'excellence academique chinoise</p>
+                    <p>&copy; {{ date('Y') }} Campus Chine. Tous droits réservés.</p>
+                    <p>Votre passerelle vers l'excellence académique chinoise</p>
                 </div>
             </div>
         </div>

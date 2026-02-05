@@ -8,7 +8,7 @@ return [
     */
     'phone' => '+8617880215750, +22967155555',
     
-    'email' => 'contact@campuschine.org, campuschine@gmail.com',
+    'email' => 'contact@campuschine.org, campuschine01@gmail.com',
     
     'location' => 'Chongqing - Chine, Cotonou - Bénin',
     
@@ -20,11 +20,12 @@ return [
     |--------------------------------------------------------------------------
     */
     'whatsapp' => [
-        'number' => '+2290148880808',
+        'phone' => '+22967155555',
+        'number' => '+2290151120202',
         'link' => 'https://wa.me/',
-        'message' => 'Bonjour Campus Chine ! Je suis interesse(e) par vos services d\'accompagnement pour etudier en Chine. Pouvez-vous m\'envoyer plus d\'informations ?',
+        'message' => 'Bonjour Campus Chine ! Je suis intéressé(e) par vos services d\'accompagnement pour étudier en Chine. Pouvez-vous m\'envoyer plus d\'informations ?',
         'brochure_message' => 'Bonjour ! Je souhaite recevoir la brochure Campus Chine.',
-        'event_message' => 'Bonjour ! Je souhaite m\'inscrire a la conference de Mars 2026.',
+        'event_message' => 'Bonjour ! Je souhaite m\'inscrire à la conférence de Mars 2026.',
     ],
 
     /*
@@ -35,7 +36,7 @@ return [
     'social' => [
         'facebook' => '#',
         'instagram' => '#',
-        'linkedin' => '#',
+        'tiktok' => '@campuschine01',
     ],
 
     /*
@@ -44,14 +45,14 @@ return [
     |--------------------------------------------------------------------------
     */
     'mission' => [
-        'intro' => 'La mission de Campus Chine est d\'accompagner les etudiants africains et internationaux a chaque etape de leur projet d\'etudes en Chine, en leur offrant un acces fiable, securise et transparent aux universites chinoises de rang mondial.',
+        'intro' => 'La mission de Campus Chine est d\'accompagner les étudiants africains et internationaux à chaque étape de leur projet d\'études en Chine, en leur offrant un accès fiable, sécurisé et transparent aux universités chinoises de rang mondial.',
         'points' => [
-            'Faciliter l\'orientation academique vers des formations reconnues en chinois ou en anglais',
+            'Faciliter l\'orientation académique vers des formations reconnues en chinois ou en anglais',
             'Assurer un accompagnement administratif complet (admission universitaire, visa, installation)',
-            'Rassurer et impliquer les parents a travers un suivi structure et professionnel',
-            'Promouvoir l\'excellence academique, la diversite culturelle et l\'ouverture internationale',
+            'Rassurer et impliquer les parents à travers un suivi structuré et professionnel',
+            'Promouvoir l\'excellence académique, la diversité culturelle et l\'ouverture internationale',
         ],
-        'conclusion' => 'Campus Chine se positionne comme un pont educatif entre l\'Afrique et la Chine, au service de la reussite universitaire et professionnelle des etudiants.',
+        'conclusion' => 'Campus Chine se positionne comme un pont éducatif entre l\'Afrique et la Chine, au service de la réussite universitaire et professionnelle des étudiants.',
     ],
 
     /*
@@ -61,34 +62,34 @@ return [
     */
     'parcours' => [
         [
-            'title' => 'Choix de l\'universite et de la filiere',
+            'title' => 'Choix de l\'université et de la filière',
             'icon' => 'graduation-cap',
-            'content' => 'Le choix de la bonne universite et de la filiere est determinant pour votre reussite. Campus Chine vous guide pour identifier les etablissements qui correspondent a vos objectifs academiques et professionnels, en prenant en compte votre profil, vos aspirations et le marche du travail. Nous vous aidons a comparer les programmes, la langue d\'enseignement et les options de bourses disponibles.',
+            'content' => 'Le choix de la bonne université et de la filière est déterminant pour votre réussite. Campus Chine vous guide pour identifier les établissements qui correspondent à vos objectifs académiques et professionnels, en prenant en compte votre profil, vos aspirations et le marché du travail. Nous vous aidons à comparer les programmes, la langue d\'enseignement et les options de bourses disponibles.',
         ],
         [
             'title' => 'Constitution du dossier d\'inscription',
             'icon' => 'file-text',
-            'content' => 'Une candidature complete et conforme est la cle pour obtenir votre lettre d\'admission. Nous vous accompagnons dans la collecte et la verification des documents necessaires : diplomes, releves de notes, certificats de langue, formulaires specifiques, photos et lettres de motivation. Chaque dossier est prepare pour repondre aux exigences precises des universites chinoises.',
+            'content' => 'Une candidature complète et conforme est la clé pour obtenir votre lettre d\'admission. Nous vous accompagnons dans la collecte et la vérification des documents nécessaires : diplômes, relevés de notes, certificats de langue, formulaires spécifiques, photos et lettres de motivation. Chaque dossier est préparé pour répondre aux exigences précises des universités chinoises.',
         ],
         [
-            'title' => 'Preparation et obtention du visa etudiant',
+            'title' => 'Préparation et obtention du visa étudiant',
             'icon' => 'stamp',
-            'content' => 'L\'obtention du visa peut etre complexe pour certains etudiants. Campus Chine vous explique les types de visas (X1 pour les etudes longues, X2 pour les courtes), verifie que votre dossier est complet et vous guide pas a pas pour l\'entretien et la soumission a l\'ambassade. Nous vous aidons a anticiper les erreurs frequentes et a securiser votre voyage.',
+            'content' => 'L\'obtention du visa peut être complexe pour certains étudiants. Campus Chine vous explique les types de visas (X1 pour les études longues, X2 pour les courtes), vérifie que votre dossier est complet et vous guide pas à pas pour l\'entretien et la soumission à l\'ambassade. Nous vous aidons à anticiper les erreurs fréquentes et à sécuriser votre voyage.',
         ],
         [
-            'title' => 'Preparation au depart',
+            'title' => 'Préparation au départ',
             'icon' => 'plane',
-            'content' => 'Avant votre depart, nous vous fournissons toutes les informations pratiques : achat du billet d\'avion, gestion du budget, conseils sur les bagages et les equipements indispensables. Nous vous expliquons aussi les regles d\'assurance sante et les applications indispensables pour faciliter votre installation en Chine.',
+            'content' => 'Avant votre départ, nous vous fournissons toutes les informations pratiques : achat du billet d\'avion, gestion du budget, conseils sur les bagages et les équipements indispensables. Nous vous expliquons aussi les règles d\'assurance santé et les applications indispensables pour faciliter votre installation en Chine.',
         ],
         [
-            'title' => 'Arrivee et installation sur place',
+            'title' => 'Arrivée et installation sur place',
             'icon' => 'map-pin',
-            'content' => 'Campus Chine assure un accueil personnalise des votre arrivee : transfert depuis l\'aeroport, installation dans le logement choisi, orientation sur le campus et presentation des services universitaires.',
+            'content' => 'Campus Chine assure un accueil personnalisé dès votre arrivée : transfert depuis l\'aéroport, installation dans le logement choisi, orientation sur le campus et présentation des services universitaires.',
         ],
         [
-            'title' => 'Vie etudiante et reussite academique',
+            'title' => 'Vie étudiante et réussite académique',
             'icon' => 'book-open',
-            'content' => 'Une fois sur place, l\'accompagnement continue. Nous partageons des conseils pratiques pour reussir vos etudes et vous integrer culturellement : organisation academique, methodes d\'apprentissage, vie quotidienne et respect des regles locales. Notre objectif est de vous donner toutes les cles pour que votre experience en Chine soit enrichissante et securisee.',
+            'content' => 'Une fois sur place, l\'accompagnement continue. Nous partageons des conseils pratiques pour réussir vos études et vous intégrer culturellement : organisation académique, méthodes d\'apprentissage, vie quotidienne et respect des règles locales. Notre objectif est de vous donner toutes les clés pour que votre expérience en Chine soit enrichissante et sécurisée.',
         ],
     ],
 
