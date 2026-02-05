@@ -21,14 +21,14 @@
                     <div class="scroll-hidden">
                         <span class="inline-flex items-center gap-2 bg-accent/10 text-accent font-bold px-5 py-2.5 rounded-full text-sm">
                             <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
-                            RENTREE 2026 - INSCRIPTIONS OUVERTES
+                            INSCRIPTIONS OUVERTES
                         </span>
                     </div>
                     
                     {{-- Main Title --}}
                     <div class="scroll-hidden delay-100">
                         <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-heading font-extrabold text-primary leading-[1.1] tracking-tight">
-                            Votre Projet d'Etudes en 
+                            Votre Projet d'Études en 
                             <span class="text-gradient-accent">Chine</span>, 
                             C'est Maintenant.
                         </h1>
@@ -37,8 +37,8 @@
                     {{-- Subtitle --}}
                     <div class="scroll-hidden delay-200">
                         <p class="text-lg sm:text-xl text-neutral/80 leading-relaxed max-w-xl">
-                            Rejoignez l'elite des etudiants africains dans les universites chinoises les plus prestigieuses. 
-                            <strong class="text-primary">Accompagnement complet</strong> : dossier, visa, integration — de votre candidature jusqu'a votre installation en Chine.
+                            Rejoignez l'élite des étudiants africains dans les universités chinoises les plus prestigieuses. 
+                            <strong class="text-primary">Accompagnement complet</strong> : dossier, visa, intégration — de votre candidature jusqu'à votre installation en Chine.
                         </p>
                     </div>
                     
@@ -47,7 +47,7 @@
                         <div class="flex flex-wrap gap-8 py-6 border-y border-gray-200">
                             <div class="text-center">
                                 <div class="text-3xl font-heading font-extrabold text-primary">500+</div>
-                                <div class="text-sm text-neutral/60">Etudiants accompagnes</div>
+                                <div class="text-sm text-neutral/60">Étudiants accompagnés</div>
                             </div>
                             <div class="text-center">
                                 <div class="text-3xl font-heading font-extrabold text-accent">100%</div>
@@ -70,7 +70,7 @@
                                 Obtenir la Brochure via WhatsApp
                             </a>
                             <a href="#parcours" class="btn-outline text-center">
-                                Decouvrir le parcours
+                                Découvrir le parcours
                                 <x-lucide-arrow-down class="w-5 h-5 ml-2" />
                             </a>
                         </div>
@@ -86,7 +86,7 @@
                             <div class="relative">
                                 <img 
                                     src="{{ asset('images/images-1.jpeg') }}" 
-                                    alt="Etudiants africains en Chine" 
+                                    alt="Étudiants africains en Chine" 
                                     class="w-full h-80 lg:h-96 object-cover rounded-3xl shadow-2xl"
                                 >
                                 {{-- Floating Badge --}}
@@ -97,7 +97,7 @@
                                         </div>
                                         <div>
                                             <div class="font-bold text-primary">Top 100</div>
-                                            <div class="text-sm text-neutral/60">Universites mondiales</div>
+                                            <div class="text-sm text-neutral/60">Universités mondiales</div>
                                         </div>
                                     </div>
                                 </div>
@@ -107,10 +107,10 @@
                         {{-- WhatsApp CTA Card --}}
                         <div class="mt-8 glass-strong rounded-2xl p-6 text-center">
                             <h3 class="font-heading font-bold text-xl text-primary mb-3">
-                                Pret a commencer ?
+                                Prêt à commencer ?
                             </h3>
                             <p class="text-neutral/70 mb-4 text-sm">
-                                Contactez-nous sur WhatsApp pour un accompagnement personnalise
+                                Contactez-nous sur WhatsApp pour un accompagnement personnalisé
                             </p>
                             <a href="{{ config('landing.whatsapp.link') }}{{ config('landing.whatsapp.number') }}?text={{ urlencode(config('landing.whatsapp.message')) }}" 
                                target="_blank"
@@ -180,7 +180,7 @@
                         <div class="absolute -inset-4 bg-gradient-to-r from-accent/20 to-primary/20 rounded-3xl blur-2xl"></div>
                         <img 
                             src="{{ asset('images/images-2.jpeg') }}" 
-                            alt="Etudiants Campus Chine" 
+                            alt="Étudiants Campus Chine" 
                             class="relative w-full h-96 object-cover rounded-3xl shadow-2xl"
                         >
                     </div>
@@ -203,13 +203,11 @@
             </div>
             <div class="scroll-hidden delay-100">
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-primary mb-6">
-                    Pourquoi Etudier en <span class="text-accent">Chine</span> ?
+                    Pourquoi Étudier en <span class="text-accent">Chine</span> ?
                 </h2>
             </div>
             <div class="scroll-hidden delay-200">
-                <p class="text-lg text-neutral/70 max-w-2xl mx-auto">
-                    La Chine offre une combinaison unique d'excellence academique, de Projets genereuses et d'opportunites de carriere internationales.
-                </p>
+                    La Chine offre une combinaison unique d'excellence académique, de bourses généreuses et d'opportunités de carrière internationales.
             </div>
         </div>
         
@@ -223,9 +221,9 @@
                         <div class="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                             <x-lucide-graduation-cap class="w-8 h-8 text-white" />
                         </div>
-                        <h3 class="text-xl font-bold text-primary mb-4">Diplomes de Rang Mondial</h3>
+                        <h3 class="text-xl font-bold text-primary mb-4">Diplômes de Rang Mondial</h3>
                         <p class="text-neutral/70 leading-relaxed">
-                            Universites dans le Top 100 Shanghai Ranking. Diplomes reconnus en Afrique, Europe et Amerique.
+                            Universités dans le Top 100 Shanghai Ranking. Diplômes reconnus en Afrique, Europe et Amérique.
                         </p>
                     </div>
                 </div>
@@ -236,9 +234,9 @@
                         <div class="w-16 h-16 rounded-2xl gradient-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                             <x-lucide-banknote class="w-8 h-8 text-white" />
                         </div>
-                        <h3 class="text-xl font-bold text-primary mb-4">Bourses Jusqu'a 100%</h3>
+                        <h3 class="text-xl font-bold text-primary mb-4">Bourses Jusqu'à 100%</h3>
                         <p class="text-neutral/70 leading-relaxed">
-                            Bourses CSC, provinciales et universitaires couvrant scolarite, logement et allocation mensuelle.
+                            Bourses CSC, provinciales et universitaires couvrant scolarité, logement et allocation mensuelle.
                         </p>
                     </div>
                 </div>
@@ -249,9 +247,9 @@
                         <div class="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                             <x-lucide-trending-up class="w-8 h-8 text-white" />
                         </div>
-                        <h3 class="text-xl font-bold text-primary mb-4">Explosion de Carriere</h3>
+                        <h3 class="text-xl font-bold text-primary mb-4">Explosion de Carrière</h3>
                         <p class="text-neutral/70 leading-relaxed">
-                            Le mandarin ouvre les portes de la 2eme economie mondiale. Bilingues gagnent +40% de salaire.
+                            Le mandarin ouvre les portes de la 2ème économie mondiale. Les bilingues gagnent +40% de salaire.
                         </p>
                     </div>
                 </div>
@@ -275,9 +273,9 @@
                         <div class="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                             <x-lucide-users class="w-8 h-8 text-white" />
                         </div>
-                        <h3 class="text-xl font-bold text-primary mb-4">Vie Etudiante Dynamique</h3>
+                        <h3 class="text-xl font-bold text-primary mb-4">Vie Étudiante Dynamique</h3>
                         <p class="text-neutral/70 leading-relaxed">
-                            Campus modernes, clubs internationaux, voyages culturels. Une experience humaine inoubliable.
+                            Campus modernes, clubs internationaux, voyages culturels. Une expérience humaine inoubliable.
                         </p>
                     </div>
                 </div>
@@ -288,9 +286,9 @@
                         <div class="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                             <x-lucide-globe class="w-8 h-8 text-white" />
                         </div>
-                        <h3 class="text-xl font-bold text-primary mb-4">Reseau Alumni Puissant</h3>
+                        <h3 class="text-xl font-bold text-primary mb-4">Réseau Alumni Puissant</h3>
                         <p class="text-neutral/70 leading-relaxed">
-                            500+ diplomes africains. Mentorat, networking et opportunites professionnelles post-diplome.
+                            500+ diplômés africains. Mentorat, networking et opportunités professionnelles post-diplôme.
                         </p>
                     </div>
                 </div>
@@ -316,12 +314,12 @@
             </div>
             <div class="scroll-hidden delay-100">
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-primary mb-6">
-                    Le Parcours Etudiant avec <span class="text-accent">Campus Chine</span>
+                    Le Parcours Étudiant avec <span class="text-accent">Campus Chine</span>
                 </h2>
             </div>
             <div class="scroll-hidden delay-200">
                 <p class="text-lg text-neutral/70 max-w-2xl mx-auto">
-                    De votre premiere question jusqu'a votre installation en Chine, nous vous accompagnons a chaque etape.
+                    De votre première question jusqu'à votre installation en Chine, nous vous accompagnons à chaque étape.
                 </p>
             </div>
         </div>
@@ -379,7 +377,7 @@
             {{-- CTA after accordions --}}
             <div class="scroll-hidden delay-700 text-center mt-12">
                 <p class="text-neutral/70 mb-6">
-                    Pret a commencer votre parcours ?
+                    Prêt à commencer votre parcours ?
                 </p>
                 <a href="{{ config('landing.whatsapp.link') }}{{ config('landing.whatsapp.number') }}?text={{ urlencode(config('landing.whatsapp.message')) }}" 
                    target="_blank"
@@ -405,7 +403,7 @@
             </div>
             <div class="scroll-hidden delay-100">
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-primary mb-6">
-                    Temoignages de Nos <span class="text-accent">Alumni</span>
+                    Témoignages de Nos <span class="text-accent">Alumni</span>
                 </h2>
             </div>
         </div>
@@ -423,7 +421,7 @@
                             </svg>
                         </div>
                         <p class="text-neutral/80 leading-relaxed mb-6 text-lg italic">
-                            "Campus Chine m'a ouvert les portes de l'universite de Tsinghua. Aujourd'hui, je fais mon doctorat finance a 100%."
+                            "Campus Chine m'a ouvert les portes de l'université de Tsinghua. Aujourd'hui, je fais mon doctorat finance à 100%."
                         </p>
                         <div class="flex items-center gap-4">
                             <img src="{{ asset('images/images-2.jpeg') }}" alt="Amadou K." class="w-14 h-14 rounded-full object-cover border-2 border-accent">
@@ -444,13 +442,13 @@
                             </svg>
                         </div>
                         <p class="text-neutral/80 leading-relaxed mb-6 text-lg italic">
-                            "L'accompagnement visa etait impeccable. Toutes les demarches administratives, tout etait gere."
+                            "L'accompagnement visa était impeccable. Toutes les démarches administratives, tout était géré."
                         </p>
                         <div class="flex items-center gap-4">
                             <img src="{{ asset('images/images-3.jpeg') }}" alt="Fatou M." class="w-14 h-14 rounded-full object-cover border-2 border-accent">
                             <div>
                                 <div class="font-bold text-primary">Fatou M.</div>
-                                <div class="text-sm text-neutral/60">Master Commerce, Shanghai - Cote d'Ivoire</div>
+                                <div class="text-sm text-neutral/60">Master Commerce, Shanghai - Côte d'Ivoire</div>
                             </div>
                         </div>
                     </div>
@@ -465,13 +463,13 @@
                             </svg>
                         </div>
                         <p class="text-neutral/80 leading-relaxed mb-6 text-lg italic">
-                            "En 3 ans, j'ai decroche mon diplome et un emploi dans une multinationale a Shanghai."
+                            "En 3 ans, j'ai décroché mon diplôme et un emploi dans une multinationale à Shanghai."
                         </p>
                         <div class="flex items-center gap-4">
                             <img src="{{ asset('images/images-4.jpeg') }}" alt="Jean-Paul T." class="w-14 h-14 rounded-full object-cover border-2 border-accent">
                             <div>
                                 <div class="font-bold text-primary">Jean-Paul T.</div>
-                                <div class="text-sm text-neutral/60">Ingenieur chez Huawei - Cameroun</div>
+                                <div class="text-sm text-neutral/60">Ingénieur chez Huawei - Cameroun</div>
                             </div>
                         </div>
                     </div>
@@ -490,15 +488,15 @@
                         </div>
                         <div>
                             <div class="text-3xl font-heading font-extrabold text-accent">500+</div>
-                            <div class="text-sm text-neutral/60">Etudiants places</div>
+                            <div class="text-sm text-neutral/60">Étudiants placés</div>
                         </div>
                         <div>
                             <div class="text-3xl font-heading font-extrabold text-primary">15+</div>
-                            <div class="text-sm text-neutral/60">Pays representes</div>
+                            <div class="text-sm text-neutral/60">Pays représentés</div>
                         </div>
                         <div>
                             <div class="text-3xl font-heading font-extrabold text-accent">5 ans</div>
-                            <div class="text-sm text-neutral/60">D'experience</div>
+                            <div class="text-sm text-neutral/60">D'expérience</div>
                         </div>
                     </div>
                 </div>
@@ -626,7 +624,7 @@
                     <div class="scroll-hidden">
                         <span class="inline-flex items-center gap-2 bg-white/20 text-white font-bold px-4 py-2 rounded-full text-sm mb-6">
                             <span class="animate-pulse">*</span>
-                            PLACES LIMITEES
+                            PLACES LIMITÉES
                         </span>
                     </div>
                     
@@ -640,7 +638,7 @@
                     
                     <div class="scroll-hidden delay-200">
                         <p class="text-xl text-white/90 mb-8 leading-relaxed">
-                            Session d'orientation en direct avec nos experts. Decouvrez les meilleures universites et posez vos questions.
+                            Session d'orientation en direct avec nos experts. Découvrez les meilleures universités et posez vos questions.
                         </p>
                     </div>
                     
@@ -648,7 +646,7 @@
                         <ul class="space-y-3 mb-8 text-left inline-block">
                             <li class="flex items-center gap-3">
                                 <x-lucide-check-circle class="w-6 h-6 text-white" />
-                                <span>Presentation des universites partenaires</span>
+                                <span>Présentation des universités partenaires</span>
                             </li>
                             <li class="flex items-center gap-3">
                                 <x-lucide-check-circle class="w-6 h-6 text-white" />
@@ -656,7 +654,7 @@
                             </li>
                             <li class="flex items-center gap-3">
                                 <x-lucide-check-circle class="w-6 h-6 text-white" />
-                                <span>Temoignages d'anciens etudiants</span>
+                                <span>Témoignages d'anciens étudiants</span>
                             </li>
                         </ul>
                     </div>
@@ -677,7 +675,7 @@
                         
                         <div class="border-t border-gray-200 pt-6 mb-6">
                             <p class="text-neutral/70 mb-6">
-                                Inscrivez-vous maintenant via WhatsApp pour reserver votre place gratuitement.
+                                Inscrivez-vous maintenant via WhatsApp pour réserver votre place gratuitement.
                             </p>
                         </div>
                         
@@ -687,7 +685,7 @@
                             class="w-full btn-cta justify-center text-lg animate-pulse-glow"
                         >
                             <x-lucide-message-circle class="w-6 h-6 mr-2" />
-                            RESERVER MA PLACE
+                            RÉSERVER MA PLACE
                         </a>
                     </div>
                 </div>
@@ -708,20 +706,18 @@
             
             <div class="scroll-hidden">
                 <span class="inline-block bg-accent/10 text-accent font-semibold px-4 py-2 rounded-full text-sm mb-6">
-                    PASSEZ A L'ACTION
+                    PASSEZ À L'ACTION
                 </span>
             </div>
             
             <div class="scroll-hidden delay-100">
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-primary mb-6">
-                    Pret a <span class="text-accent">Commencer</span> ?
+                    Prêt à <span class="text-accent">Commencer</span> ?
                 </h2>
             </div>
             
             <div class="scroll-hidden delay-200">
-                <p class="text-lg text-neutral/70 max-w-2xl mx-auto mb-10">
-                    Contactez-nous sur WhatsApp pour recevoir votre brochure gratuite et discuter de votre projet d'etudes en Chine avec un conseiller.
-                </p>
+                    Contactez-nous sur WhatsApp pour recevoir votre brochure gratuite et discuter de votre projet d'études en Chine avec un conseiller.
             </div>
             
             <div class="scroll-hidden delay-300">
@@ -732,11 +728,10 @@
                         <x-lucide-message-circle class="w-6 h-6 mr-2" />
                         Obtenir la Brochure via WhatsApp
                     </a>
-                    <a href="{{ config('landing.whatsapp.link') }}{{ config('landing.whatsapp.number') }}?text={{ urlencode(config('landing.whatsapp.message')) }}" 
-                       target="_blank"
+                    <a href="tel:{{ config('landing.whatsapp.phone') }}" 
                        class="btn-outline text-lg">
                         <x-lucide-phone class="w-6 h-6 mr-2" />
-                        Nous Contacter
+                        Nous Appeler
                     </a>
                 </div>
             </div>
@@ -746,7 +741,7 @@
                 <div class="flex flex-wrap justify-center gap-6 mt-12 text-sm text-neutral/60">
                     <div class="flex items-center gap-2">
                         <x-lucide-shield-check class="w-5 h-5 text-green-500" />
-                        <span>Reponse rapide</span>
+                        <span>Réponse rapide</span>
                     </div>
                     <div class="flex items-center gap-2">
                         <x-lucide-clock class="w-5 h-5 text-green-500" />
