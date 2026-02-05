@@ -284,7 +284,7 @@
                         <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
                             <x-lucide-instagram class="w-5 h-5" />
                         </a>
-                        <a href="https://www.tiktok.com/@campuschine01" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
+                        <a href="{{  config('landing.social.tiktok') }}" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
                             <i class="fa-brands fa-tiktok text-white"></i>
                         </a>
                     </div>

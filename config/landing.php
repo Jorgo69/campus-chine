@@ -36,7 +36,7 @@ return [
     'social' => [
         'facebook' => '#',
         'instagram' => '#',
-        'tiktok' => '@campuschine01',
+        'tiktok' => 'https://www.tiktok.com/@campuschine01',
     ],
 
     /*
