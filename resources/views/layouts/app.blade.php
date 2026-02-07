@@ -140,7 +140,7 @@
                 {{-- Logo --}}
                 <div class="shrink-0 flex items-center">
                     <a href="#accueil" class="flex items-center gap-3">
-                        <img src="{{ asset('images/logo.jpeg') }}" alt="Campus Chine Logo" class="h-12 w-12 rounded-full object-cover shadow-lg">
+                        <img src="{{ asset('images/logo.jpeg') }}?v=1.0.1" alt="Campus Chine Logo" class="h-12 w-12 rounded-full object-cover shadow-lg">
                         <span class="text-primary font-heading font-extrabold text-2xl tracking-tighter">
                             CAMPUS<span class="text-accent">CHINE</span>
                         </span>
@@ -263,7 +263,7 @@
                 {{-- Brand --}}
                 <div class="lg:col-span-2">
                     <div class="flex items-center gap-3 mb-6">
-                        <img src="{{ asset('images/logo.jpeg') }}" alt="Campus Chine" class="h-14 w-14 rounded-full object-cover">
+                        <img src="{{ asset('images/logo.jpeg') }}?v=1.0.1" alt="Campus Chine" class="h-14 w-14 rounded-full object-cover">
                         <span class="font-heading font-extrabold text-2xl">
                             CAMPUS<span class="text-accent">CHINE</span>
                         </span>
