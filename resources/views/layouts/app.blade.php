@@ -134,7 +134,7 @@
         class="fixed top-0 w-full z-50 transition-all duration-300"
         :class="scrolled ? 'navbar-scrolled' : 'bg-transparent'"
     >
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 
                 {{-- Logo --}}
@@ -147,22 +147,25 @@
                     </a>
                 </div>
                 
-                {{-- Desktop Navigation --}}
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#accueil" class="font-medium text-neutral hover:text-accent transition-colors duration-200">
+                {{-- Desktop Navigation - Optimized to fit all items --}}
+                <div class="hidden md:flex items-center space-x-2 lg:space-x-4 xl:space-x-6">
+                    <a href="#accueil" class="whitespace-nowrap text-sm xl:text-base font-medium text-neutral hover:text-accent transition-colors duration-200">
                         Accueil
                     </a>
-                    <a href="#pourquoi" class="font-medium text-neutral hover:text-accent transition-colors duration-200">
-                        Pourquoi la Chine ?
+                    <a href="#mission" class="whitespace-nowrap text-sm xl:text-base font-medium text-neutral hover:text-accent transition-colors duration-200">
+                        Mission
                     </a>
-                    <a href="#temoignages" class="font-medium text-neutral hover:text-accent transition-colors duration-200">
+                    <a href="#pourquoi" class="whitespace-nowrap text-sm xl:text-base font-medium text-neutral hover:text-accent transition-colors duration-200">
+                        Chine
+                    </a>
+                    <a href="#parcours" class="whitespace-nowrap text-sm xl:text-base font-medium text-neutral hover:text-accent transition-colors duration-200">
+                        Parcours
+                    </a>
+                    <a href="#temoignages" class="whitespace-nowrap text-sm xl:text-base font-medium text-neutral hover:text-accent transition-colors duration-200">
                         Témoignages
                     </a>
-                    <a href="#campus" class="font-medium text-neutral hover:text-accent transition-colors duration-200">
-                        Campus
-                    </a>
-                    <a href="#evenement" class="font-semibold text-accent hover:text-accent/80 transition-colors duration-200">
-                        🔥 Événement Mars
+                    <a href="#evenement" class="whitespace-nowrap text-sm xl:text-base font-semibold text-accent hover:text-accent/80 transition-colors duration-200">
+                        🔥 Événement
                     </a>
                 </div>
                 
@@ -227,8 +230,14 @@
                 <a href="#accueil" @click="mobileOpen = false" class="text-xl font-semibold text-primary hover:text-accent transition-colors">
                     Accueil
                 </a>
+                <a href="#mission" @click="mobileOpen = false" class="text-xl font-semibold text-primary hover:text-accent transition-colors">
+                    Notre Mission
+                </a>
                 <a href="#pourquoi" @click="mobileOpen = false" class="text-xl font-semibold text-primary hover:text-accent transition-colors">
                     Pourquoi la Chine ?
+                </a>
+                <a href="#parcours" @click="mobileOpen = false" class="text-xl font-semibold text-primary hover:text-accent transition-colors">
+                    Votre Parcours
                 </a>
                 <a href="#temoignages" @click="mobileOpen = false" class="text-xl font-semibold text-primary hover:text-accent transition-colors">
                     Témoignages
@@ -306,17 +315,29 @@
                 <div>
                     <h4 class="font-heading font-bold text-lg mb-6">Contact</h4>
                     <ul class="space-y-3">
-                        <li class="flex items-center gap-3 text-white/70">
-                            <x-lucide-mail class="w-5 h-5 text-accent" />
-                            <a href="mailto:{{ config('landing.email') }}" class="hover:text-white transition-colors">
-                                {{ config('landing.email') }}
-                            </a>
+                        <li class="flex flex-col gap-3">
+                            <div class="flex items-start gap-3 text-white/70">
+                                <x-lucide-mail class="w-5 h-5 text-accent mt-1" />
+                                <div class="flex flex-col gap-1">
+                                    @foreach(config('landing.emails') as $label => $email)
+                                        <a href="mailto:{{ $email }}" class="hover:text-white transition-colors">
+                                            {{ $email }}
+                                        </a>
+                                    @endforeach
+                                </div>
+                            </div>
                         </li>
-                        <li class="flex items-center gap-3 text-white/70">
-                            <x-lucide-phone class="w-5 h-5 text-accent" />
-                            <a href="tel:{{ config('landing.phone') }}" class="hover:text-white transition-colors">
-                                {{ config('landing.phone') }}
-                            </a>
+                        <li class="flex flex-col gap-3">
+                            <div class="flex items-start gap-3 text-white/70">
+                                <x-lucide-phone class="w-5 h-5 text-accent mt-1" />
+                                <div class="flex flex-col gap-1">
+                                    @foreach(config('landing.phones') as $label => $phone)
+                                        <a href="tel:{{ $phone }}" class="hover:text-white transition-colors">
+                                            {{ $phone }}
+                                        </a>
+                                    @endforeach
+                                </div>
+                            </div>
                         </li>
                         <li class="flex items-start gap-3 text-white/70">
                             <x-lucide-map-pin class="w-5 h-5 text-accent mt-1" />

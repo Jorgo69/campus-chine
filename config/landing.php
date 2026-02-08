@@ -6,9 +6,15 @@ return [
     | Informations de Contact
     |--------------------------------------------------------------------------
     */
-    'phone' => '+8617880215750, +2290148880808',
+    'phones' => [
+        'Chine' => '+8617880215750',
+        'Bénin' => '+22967155555',
+    ],
     
-    'email' => 'contact@campuschine.org, campuschine01@gmail.com',
+    'emails' => [
+        'Principal' => 'contact@campuschine.org',
+        'Gmail' => 'campuschine01@gmail.com',
+    ],
     
     'location' => 'Chongqing - Chine, Cotonou - Bénin',
     

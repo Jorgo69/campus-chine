@@ -599,7 +599,7 @@
                 <p class="text-neutral/70 mb-6">
                     Rejoignez une communauté vibrante d'étudiants africains qui vivent une expérience unique en Chine.
                 </p>
-                <a href="#formulaire" class="btn-cta">
+                <a href="#contact" class="btn-cta">
                     <x-lucide-camera class="w-5 h-5 mr-2" />
                     Téléchargez Plus de Photos
                 </a>
