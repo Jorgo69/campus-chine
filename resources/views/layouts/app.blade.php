@@ -362,7 +362,7 @@
         <div class="border-t border-white/10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
-                    <p>&copy; {{ date('Y') }} Campus Chine. Tous droits réservés.</p>
+                    <p>&copy; {{ date('Y') }} Campus Chine. Tous droits réservés. <span class="opacity-30 text-[10px]">v1.0.3</span></p>
                     <p>Votre passerelle vers l'excellence académique chinoise</p>
                 </div>
             </div>

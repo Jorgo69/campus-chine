@@ -1,57 +1,55 @@
 #!/bin/bash
 # ==============================================================================
-# DEPLOY.SH - Post-deployment script for Campus Chine
-# Run manually via LWS panel (Cron or Terminal) after FTP deployment
+# DEPLOY.SH - Adapté pour LWS Perso (campuschine.org)
 # ==============================================================================
 
 set -e
 
 # ------------------------------------------------------------------------------
-# CONFIG
+# CONFIG : Chemin spécifique à ton hébergement LWS
 # ------------------------------------------------------------------------------
-PROJECT_DIR="/home/c2714215c/public_html/campus-chine"
+PROJECT_DIR="/var/www/campuschine.org/htdocs"
 
 # ------------------------------------------------------------------------------
-# NAVIGATION
+# DIAGNOSTICS
 # ------------------------------------------------------------------------------
-cd "$PROJECT_DIR" || { echo "ERROR: Cannot access $PROJECT_DIR"; exit 1; }
-echo "[1/5] Directory: $PROJECT_DIR"
+echo "[D] Passage vers le dossier htdocs..."
+cd "$PROJECT_DIR" || { echo "ERROR: Dossier $PROJECT_DIR introuvable"; exit 1; }
+echo "[1/4] Répertoire actuel : $(pwd)"
 
 # ------------------------------------------------------------------------------
-# COMPOSER INSTALL
-# Install production dependencies on server
+# COMPOSER : Désactivé sur LWS Perso
+# LWS Perso n'autorise pas l'exécution de Composer en ligne de commande.
+# C'est ton GitHub Action qui s'en occupe déjà (transfert du dossier vendor).
 # ------------------------------------------------------------------------------
-echo "[2/5] Installing Composer dependencies..."
-composer install --no-dev --optimize-autoloader --no-interaction
+echo "[2/4] Info : Composer est géré par GitHub Actions (Dossier vendor déjà présent)."
 
 # ------------------------------------------------------------------------------
-# STORAGE LINK
-# Creates public/storage -> storage/app/public symlink
+# STORAGE LINK : Création du lien symbolique
+# Indispensable pour afficher tes images/fichiers uploadés
 # ------------------------------------------------------------------------------
-echo "[3/5] Checking storage link..."
+echo "[3/4] Vérification du lien storage..."
 if [ ! -L "public/storage" ]; then
-    php artisan storage:link
-    echo "    Link created"
+    # Note : Sur certains LWS, php artisan storage:link peut échouer si exec() est bridé.
+    # On tente quand même la commande PHP.
+    php artisan storage:link || echo "    Attention : Impossible de créer le lien via PHP"
 else
-    echo "    Link exists"
+    echo "    Le lien storage existe déjà"
 fi
 
 # ------------------------------------------------------------------------------
 # CACHE OPTIMIZATION
-# Clear and rebuild all caches for production
+# On vide les caches pour forcer la prise en compte des nouveaux fichiers
 # ------------------------------------------------------------------------------
-echo "[4/5] Optimizing caches..."
-php artisan optimize:clear
-php artisan config:cache
-php artisan route:cache
-php artisan view:cache
+echo "[4/4] Nettoyage des caches Laravel..."
+php artisan optimize:clear || echo "    Info : Erreur mineure lors du nettoyage (souvent dû aux droits)"
 
 # ------------------------------------------------------------------------------
-# DATABASE MIGRATION (disabled until DB is configured)
-# Uncomment when ready:
+# MIGRATIONS : Optionnel
+# À décommenter une fois ta base de données créée sur le panel LWS
+# ------------------------------------------------------------------------------
+# echo "[MIGRATION] Lancement des migrations..."
 # php artisan migrate --force
-# ------------------------------------------------------------------------------
-echo "[5/5] Database migration: SKIPPED (uncomment when ready)"
 
-echo "Deployment complete"
+echo "--- Script terminé avec succès ---"
 exit 0
