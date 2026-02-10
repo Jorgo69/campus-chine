@@ -3,7 +3,7 @@
 # DEPLOY.SH - Adapté pour LWS Perso (campuschine.org)
 # ==============================================================================
 
-set -e
+# set -e # Désactivé pour éviter de bloquer tout le script si une commande mineure échoue
 
 # ------------------------------------------------------------------------------
 # CONFIG : Chemin spécifique à ton hébergement LWS
@@ -42,7 +42,7 @@ fi
 # On vide les caches pour forcer la prise en compte des nouveaux fichiers
 # ------------------------------------------------------------------------------
 echo "[4/4] Nettoyage des caches Laravel..."
-php artisan optimize:clear || echo "    Info : Erreur mineure lors du nettoyage (souvent dû aux droits)"
+/usr/local/php8.3/bin/php artisan optimize:clear || php artisan optimize:clear || echo "    Info : Erreur mineure lors du nettoyage"
 
 # ------------------------------------------------------------------------------
 # MIGRATIONS : Optionnel
