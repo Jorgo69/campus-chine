@@ -52,7 +52,7 @@ $command = "cd " . base_path() . " && bash deploy.sh 2>&1";
 exec($command, $output, $returnCode);
 
 // Log output
-logMessage('User: ' . getcurrentuser());
+logMessage('User: ' . get_current_user());
 logMessage('Path: ' . getenv('PATH'));
 logMessage('Output: ' . implode("\n", $output));
 logMessage('Return code: ' . $returnCode);
