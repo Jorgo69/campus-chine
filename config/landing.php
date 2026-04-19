@@ -27,7 +27,7 @@ return [
     */
     'whatsapp' => [
         'phone' => '+2290148880808',
-        'number' => '+2290151120202',
+        'number' => '+2290197585801',
         'link' => 'https://wa.me/',
         'message' => 'Bonjour Campus Chine ! Je suis intéressé(e) par vos services d\'accompagnement pour étudier en Chine. Pouvez-vous m\'envoyer plus d\'informations ?',
         'brochure_message' => 'Bonjour ! Je souhaite recevoir la brochure Campus Chine.',
@@ -105,8 +105,8 @@ return [
     |--------------------------------------------------------------------------
     */
     'event' => [
-        'date' => 'Samedi 28 Mars 2026',
-        'time' => '10h00 (Heure du Bénin)',
-        'title' => 'Conference Exclusive',
+        'date' => 'Lundi 01 Juin 2026',
+        'time' => ' ',
+        'title' => 'Inscription',
     ],
 ];

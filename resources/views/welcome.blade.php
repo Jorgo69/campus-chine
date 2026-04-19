@@ -632,13 +632,13 @@
                         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-black mb-6 leading-tight">
                             {{ config('landing.event.title') }}
                             <br>
-                            <span class="text-white/90">MARS 2026</span>
+                            <span class="text-white/90">Avant 1er Juin 2026</span>
                         </h2>
                     </div>
                     
                     <div class="scroll-hidden delay-200">
                         <p class="text-xl text-white/90 mb-8 leading-relaxed">
-                            Session d'orientation en direct avec nos experts. Découvrez les meilleures universités et posez vos questions.
+                            Inscrivez-vous avant le 1er juin 2026 pour la rentrée academique du 1er septembre 2026.
                         </p>
                     </div>
                     
@@ -685,7 +685,7 @@
                             class="w-full btn-cta justify-center text-lg animate-pulse-glow"
                         >
                             <x-lucide-message-circle class="w-6 h-6 mr-2" />
-                            RÉSERVER MA PLACE
+                            M'INSCRIRE
                         </a>
                     </div>
                 </div>
